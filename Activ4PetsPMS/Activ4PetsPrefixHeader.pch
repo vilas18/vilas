@@ -1,0 +1,52 @@
+//
+//  Activ4PetsPrefixHeader.pch
+//  Activ4PetsPMS
+//
+//  Created by Activ Doctors Online on 18/08/17.
+//  Copyright © 2017 Activ Doctors Online. All rights reserved.
+//
+
+#ifndef Activ4PetsPrefixHeader_pch
+#define Activ4PetsPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "MBProgressHUD.h"
+#import "CheckNetwork.h"
+#import "Reachability.h"
+#import "RestClient.h"
+#import "CommonResponseModel.h"
+#import "dateFormatterModelClass.h"
+#import "UIImageView+WebCache.h"
+#import "APIConstants.h"
+
+
+//#import "ParserClass.h"
+//#import "Patient.h"
+//#import "PetList.h"
+//#import "EmergencyContact.h"
+//#import "Message.h"
+//#import "Calendar.h"
+//#import "Macro.h"
+//#import "TWRCharts/TWRChart.h"
+//#import "MGSwipeTableCell.h"
+//#import "MGSwipeButton.h"
+//#import "DropDown.h"
+#import "TPKeyboardAvoidingScrollView.h"
+#import "UIScrollView+TPKeyboardAvoidingAdditions.h"
+//#import "UIImageView+WebCache.h"
+//#import "BBBadgeBarButtonItem.h"
+//#import "SavedUserLoginViewController.h"
+//#import "HealthHistoryTableViewCell.h"
+//#import "NewMedicalSummaryViewController.h"
+//#import "FDGraphView.h"
+//#import "CommonInstance.h"
+//#import "UITextField+Extention.h"
+
+#endif
+
+#endif /* Activ4PetsPrefixHeader_pch */
