@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60C064D21520FAD001CB7C7 /* PaidOnlineVetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C064C21520FAD001CB7C7 /* PaidOnlineVetVC.swift */; };
 		A61252B0207F37530083D6F6 /* PetCareArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61252AF207F37530083D6F6 /* PetCareArticlesViewController.swift */; };
 		A61252B22080789A0083D6F6 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61252B12080789A0083D6F6 /* ArticleDetailsViewController.swift */; };
 		A61252B42080828A0083D6F6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A61252B3208082890083D6F6 /* MessageUI.framework */; };
@@ -273,6 +274,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A60C064C21520FAD001CB7C7 /* PaidOnlineVetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidOnlineVetVC.swift; sourceTree = "<group>"; };
 		A60F10D320C14F68007F784C /* responseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = responseParser.h; sourceTree = "<group>"; };
 		A61252AF207F37530083D6F6 /* PetCareArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareArticlesViewController.swift; sourceTree = "<group>"; };
 		A61252B12080789A0083D6F6 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
@@ -859,6 +861,7 @@
 			children = (
 				A6EA8CF821511B2300C97292 /* OnlineChoiceVC.swift */,
 				A6EA8CFA21513B8300C97292 /* FreeQuestionVC.swift */,
+				A60C064C21520FAD001CB7C7 /* PaidOnlineVetVC.swift */,
 			);
 			name = "Ask a vet online";
 			sourceTree = "<group>";
@@ -1820,6 +1823,7 @@
 				A64B537220C12CB500247D61 /* SharedOwnerDetailsViewController.swift in Sources */,
 				A64B537320C12CB500247D61 /* InsuranceCell.swift in Sources */,
 				A64B537420C12CB500247D61 /* EditAdoptionDetailsViewController.swift in Sources */,
+				A60C064D21520FAD001CB7C7 /* PaidOnlineVetVC.swift in Sources */,
 				A6903F0620C1088600A6FD09 /* ContactListViewController.swift in Sources */,
 				A64B537520C12CB500247D61 /* EditAddVeterinarianViewController.swift in Sources */,
 				A64B537620C12CB500247D61 /* DocumentDetailsViewController.swift in Sources */,

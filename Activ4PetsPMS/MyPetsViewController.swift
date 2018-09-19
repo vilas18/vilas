@@ -1175,7 +1175,7 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
         })
-        let cancel = UIAlertAction(title: "Vet Online", style: .cancel, handler: {(action: UIAlertAction) -> Void in
+        let cancel = UIAlertAction(title: "Ask A Vet Online", style: .cancel, handler: {(action: UIAlertAction) -> Void in
             let online: OnlineChoiceVC = self.storyboard?.instantiateViewController(withIdentifier: "OnlineChoice") as! OnlineChoiceVC
             self.navigationController?.pushViewController(online, animated: true)
         })

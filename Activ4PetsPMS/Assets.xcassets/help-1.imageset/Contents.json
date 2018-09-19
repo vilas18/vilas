@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "call.pdf",
+      "filename" : "help.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "call@2x.pdf",
+      "filename" : "help@2x.pdf",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "call@3x.pdf",
+      "filename" : "help@3x.pdf",
       "scale" : "3x"
     }
   ],
