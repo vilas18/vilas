@@ -86,6 +86,8 @@
 		A65E82111F7E7A2700F44203 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A639A77D1F5D5249008C2D34 /* CoreLocation.framework */; };
 		A65E83581FC8064C007CCB32 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E83551FC8064B007CCB32 /* Main_iPhone.storyboard */; };
 		A65E835A1FC8064C007CCB32 /* MedicalSummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E83571FC8064C007CCB32 /* MedicalSummary.storyboard */; };
+		A660D6AC2153844E000FE303 /* PaidVetListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A660D6AB2153844E000FE303 /* PaidVetListVC.swift */; };
+		A660D6B421538863000FE303 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A660D6B321538862000FE303 /* ContactListViewController.swift */; };
 		A66629701FA09526005CD5AD /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A666296F1FA09526005CD5AD /* versions.plist */; };
 		A66629741FA0971C005CD5AD /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A66629711FA0971C005CD5AD /* iVersion.bundle */; };
 		A66629751FA0971C005CD5AD /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A66629731FA0971C005CD5AD /* iVersion.m */; };
@@ -105,7 +107,6 @@
 		A6903EDF20C0354100A6FD09 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = A6903EDE20C0354100A6FD09 /* UIImage+GIF.m */; };
 		A6903EE320C0358700A6FD09 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A6903EE220C0358600A6FD09 /* UIImageView+HighlightedWebCache.m */; };
 		A6903EFC20C0375C00A6FD09 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6903EF820C0375B00A6FD09 /* OpenSans-LightItalic.ttf */; };
-		A6903F0620C1088600A6FD09 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6903F0520C1088600A6FD09 /* ContactListViewController.swift */; };
 		A6903F1220C1094C00A6FD09 /* SerumElectrolytesGraphViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6903F1120C1094B00A6FD09 /* SerumElectrolytesGraphViewViewController.swift */; };
 		A6903F1420C1096100A6FD09 /* HemoglobinGraphViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6903F1320C1096100A6FD09 /* HemoglobinGraphViewViewController.swift */; };
 		A6903F1A20C109B000A6FD09 /* AddEditPulseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6903F1920C109AF00A6FD09 /* AddEditPulseViewController.swift */; };
@@ -348,6 +349,8 @@
 		A65BBEBE1FE24F6700160EAE /* EditAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlbumViewController.swift; sourceTree = "<group>"; };
 		A65E83551FC8064B007CCB32 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A65E83571FC8064C007CCB32 /* MedicalSummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalSummary.storyboard; sourceTree = "<group>"; };
+		A660D6AB2153844E000FE303 /* PaidVetListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidVetListVC.swift; sourceTree = "<group>"; };
+		A660D6B321538862000FE303 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		A666296F1FA09526005CD5AD /* versions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
 		A66629711FA0971C005CD5AD /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		A66629721FA0971C005CD5AD /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
@@ -380,7 +383,6 @@
 		A6903EFF20C1081E00A6FD09 /* InsuranceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceCell.swift; sourceTree = "<group>"; };
 		A6903F0120C1084800A6FD09 /* EditAdoptionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAdoptionDetailsViewController.swift; sourceTree = "<group>"; };
 		A6903F0320C1086200A6FD09 /* PetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailsViewController.swift; sourceTree = "<group>"; };
-		A6903F0520C1088600A6FD09 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		A6903F0720C1089B00A6FD09 /* EditAddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAddContactViewController.swift; sourceTree = "<group>"; };
 		A6903F0920C108B000A6FD09 /* EditAddVeterinarianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAddVeterinarianViewController.swift; sourceTree = "<group>"; };
 		A6903F1120C1094B00A6FD09 /* SerumElectrolytesGraphViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerumElectrolytesGraphViewViewController.swift; sourceTree = "<group>"; };
@@ -506,7 +508,6 @@
 		A6FAE24B1F46EBF100FA4EA5 /* RestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestClient.m; sourceTree = "<group>"; };
 		A6FAE24F1F46EC1800FA4EA5 /* CommonResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonResponseModel.h; sourceTree = "<group>"; };
 		A6FAE2761F46ECD800FA4EA5 /* VeterinarianListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeterinarianListViewController.swift; sourceTree = "<group>"; };
-		A6FAE27C1F46ECE100FA4EA5 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		A6FAE2841F46ED0500FA4EA5 /* AlbumListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		A6FAE2851F46ED0500FA4EA5 /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
 		A6FAE2871F46ED0500FA4EA5 /* AddNewAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAlbumViewController.swift; sourceTree = "<group>"; };
@@ -862,6 +863,7 @@
 				A6EA8CF821511B2300C97292 /* OnlineChoiceVC.swift */,
 				A6EA8CFA21513B8300C97292 /* FreeQuestionVC.swift */,
 				A60C064C21520FAD001CB7C7 /* PaidOnlineVetVC.swift */,
+				A660D6AB2153844E000FE303 /* PaidVetListVC.swift */,
 			);
 			name = "Ask a vet online";
 			sourceTree = "<group>";
@@ -1136,9 +1138,8 @@
 		A6FAE2551F46EC5700FA4EA5 /* ContactsList */ = {
 			isa = PBXGroup;
 			children = (
-				A6FAE27C1F46ECE100FA4EA5 /* ContactListViewController.swift */,
+				A660D6B321538862000FE303 /* ContactListViewController.swift */,
 				A6903F0720C1089B00A6FD09 /* EditAddContactViewController.swift */,
-				A6903F0520C1088600A6FD09 /* ContactListViewController.swift */,
 			);
 			name = ContactsList;
 			sourceTree = "<group>";
@@ -1824,7 +1825,6 @@
 				A64B537320C12CB500247D61 /* InsuranceCell.swift in Sources */,
 				A64B537420C12CB500247D61 /* EditAdoptionDetailsViewController.swift in Sources */,
 				A60C064D21520FAD001CB7C7 /* PaidOnlineVetVC.swift in Sources */,
-				A6903F0620C1088600A6FD09 /* ContactListViewController.swift in Sources */,
 				A64B537520C12CB500247D61 /* EditAddVeterinarianViewController.swift in Sources */,
 				A64B537620C12CB500247D61 /* DocumentDetailsViewController.swift in Sources */,
 				A64B537720C12CB500247D61 /* ConsultationDetailsViewController.swift in Sources */,
@@ -1897,6 +1897,7 @@
 				A65233D41FC0127E00D97F2B /* HelpViewController.swift in Sources */,
 				A6FAE2CD1F46EE1300FA4EA5 /* AddEditTemperatureViewController.swift in Sources */,
 				A6FAE2891F46ED0500FA4EA5 /* AlbumListViewController.swift in Sources */,
+				A660D6B421538863000FE303 /* ContactListViewController.swift in Sources */,
 				A61F69471F4C65C30051C9AD /* BoarderLinksViewController.swift in Sources */,
 				A6FAE30E1F46EED900FA4EA5 /* SurgeryListViewController.swift in Sources */,
 				A6903F1420C1096100A6FD09 /* HemoglobinGraphViewViewController.swift in Sources */,
@@ -1944,6 +1945,7 @@
 				A6B7B5052086195D0068881E /* SelectPetViewController.swift in Sources */,
 				A6903F1A20C109B000A6FD09 /* AddEditPulseViewController.swift in Sources */,
 				A61F69491F4C65D10051C9AD /* PetSittersLinksViewController.swift in Sources */,
+				A660D6AC2153844E000FE303 /* PaidVetListVC.swift in Sources */,
 				A63F15FF1F5E837800EAA7D6 /* ReminderModel.swift in Sources */,
 				A6FAE2E61F46EE9100FA4EA5 /* HospitalizationsListViewController.swift in Sources */,
 				A6FAE1F81F46EABB00FA4EA5 /* TWRDataSet+Strings.m in Sources */,

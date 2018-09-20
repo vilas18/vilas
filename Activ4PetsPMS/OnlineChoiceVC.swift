@@ -10,41 +10,46 @@ import UIKit
 
 class OnlineChoiceVC: UIViewController {
 
-    @IBOutlet weak var paid1: UIImageView!
-    @IBOutlet weak var free1: UIImageView!
-    @IBOutlet weak var free2: UILabel!
-    @IBOutlet weak var free3: UILabel!
-    @IBOutlet weak var free4: UIView!
+//    @IBOutlet weak var paid1: UIImageView!
+//    @IBOutlet weak var free1: UIImageView!
+//    @IBOutlet weak var free2: UILabel!
+//    @IBOutlet weak var free3: UILabel!
+//    @IBOutlet weak var free4: UIView!
+    
+    @IBOutlet weak var paidIcon: UIImageView!
     @IBOutlet weak var paidLabel: UILabel!
     @IBOutlet weak var paidView: UIView!
+    @IBOutlet weak var freeIcon: UIImageView!
+    @IBOutlet weak var freeLbl: UILabel!
+    @IBOutlet weak var freeLbl1: UILabel! 
+    @IBOutlet weak var freeView: UIView!
     override func viewDidLoad() {
     super.viewDidLoad()
-    let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
         
+    let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
         tapG.numberOfTapsRequired = 1
         tapG.cancelsTouchesInView = false
         
-        self.paid1.addGestureRecognizer(tapG)
-        self.free1.addGestureRecognizer(tapG)
-        self.free2.addGestureRecognizer(tapG)
-        self.free3.addGestureRecognizer(tapG)
+        self.paidIcon.addGestureRecognizer(tapG)
+        self.freeLbl.addGestureRecognizer(tapG)
+        self.freeLbl1.addGestureRecognizer(tapG)
         self.paidLabel.addGestureRecognizer(tapG)
         
-        self.paid1.isUserInteractionEnabled = true
-        self.free1.isUserInteractionEnabled = true
-        self.free2.isUserInteractionEnabled = true
-        self.free3.isUserInteractionEnabled = true
+        self.paidIcon.isUserInteractionEnabled = true
+        self.freeLbl.isUserInteractionEnabled = true
+        self.freeLbl1.isUserInteractionEnabled = true
         self.paidLabel.isUserInteractionEnabled = true
+        
         
         self.title = "Ask A Vet Online"
         self.paidView.layer.masksToBounds = true
         self.paidView.layer.borderWidth = 1
         self.paidView.layer.cornerRadius = 5.0
         self.paidView.layer.borderColor = UIColor.green.cgColor
-        self.free4.layer.masksToBounds = true
-        self.free4.layer.borderWidth = 1
-        self.free4.layer.cornerRadius = 5.0
-        self.free4.layer.borderColor = UIColor.green.cgColor
+        self.freeView.layer.masksToBounds = true
+        self.freeView.layer.borderWidth = 1
+        self.freeView.layer.cornerRadius = 5.0
+        self.freeView.layer.borderColor = UIColor.green.cgColor
         // Do any additional setup after loading the view.
     }
     @objc func viewTouched(_ sender: Any)
