@@ -86,7 +86,6 @@
 		A65E82111F7E7A2700F44203 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A639A77D1F5D5249008C2D34 /* CoreLocation.framework */; };
 		A65E83581FC8064C007CCB32 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E83551FC8064B007CCB32 /* Main_iPhone.storyboard */; };
 		A65E835A1FC8064C007CCB32 /* MedicalSummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E83571FC8064C007CCB32 /* MedicalSummary.storyboard */; };
-		A660D6AC2153844E000FE303 /* PaidVetListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A660D6AB2153844E000FE303 /* PaidVetListVC.swift */; };
 		A660D6B421538863000FE303 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A660D6B321538862000FE303 /* ContactListViewController.swift */; };
 		A66629701FA09526005CD5AD /* versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A666296F1FA09526005CD5AD /* versions.plist */; };
 		A66629741FA0971C005CD5AD /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A66629711FA0971C005CD5AD /* iVersion.bundle */; };
@@ -133,6 +132,10 @@
 		A6D088411F4405CA002B7940 /* Activ4PetsPMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D088401F4405CA002B7940 /* Activ4PetsPMSUITests.swift */; };
 		A6E33D5D2091EC7D00A94A0E /* ReferAndEarnDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E33D5C2091EC7D00A94A0E /* ReferAndEarnDisplayViewController.swift */; };
 		A6E33D5F20930BD400A94A0E /* VetOnCallListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E33D5E20930BD400A94A0E /* VetOnCallListViewController.swift */; };
+		A6E6E27C2154D79800CDECFF /* FinalConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E6E27B2154D79800CDECFF /* FinalConfirmationVC.swift */; };
+		A6E6E27E2155152000CDECFF /* FreeSubmitVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E6E27D2155152000CDECFF /* FreeSubmitVCViewController.swift */; };
+		A6E6E280215515AD00CDECFF /* VetListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E6E27F215515AD00CDECFF /* VetListVC.swift */; };
+		A6E6E2822155260500CDECFF /* PaymentCardDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E6E2812155260500CDECFF /* PaymentCardDetailsVC.swift */; };
 		A6E944251F8F83FC0056F902 /* NewMedicalSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E944241F8F83FC0056F902 /* NewMedicalSummaryViewController.swift */; };
 		A6EA8CF921511B2300C97292 /* OnlineChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EA8CF821511B2300C97292 /* OnlineChoiceVC.swift */; };
 		A6EA8CFB21513B8300C97292 /* FreeQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EA8CFA21513B8300C97292 /* FreeQuestionVC.swift */; };
@@ -349,7 +352,6 @@
 		A65BBEBE1FE24F6700160EAE /* EditAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlbumViewController.swift; sourceTree = "<group>"; };
 		A65E83551FC8064B007CCB32 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A65E83571FC8064C007CCB32 /* MedicalSummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalSummary.storyboard; sourceTree = "<group>"; };
-		A660D6AB2153844E000FE303 /* PaidVetListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidVetListVC.swift; sourceTree = "<group>"; };
 		A660D6B321538862000FE303 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		A666296F1FA09526005CD5AD /* versions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = "<group>"; };
 		A66629711FA0971C005CD5AD /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
@@ -427,6 +429,10 @@
 		A6D088421F4405CA002B7940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E33D5C2091EC7D00A94A0E /* ReferAndEarnDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferAndEarnDisplayViewController.swift; sourceTree = "<group>"; };
 		A6E33D5E20930BD400A94A0E /* VetOnCallListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetOnCallListViewController.swift; sourceTree = "<group>"; };
+		A6E6E27B2154D79800CDECFF /* FinalConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalConfirmationVC.swift; sourceTree = "<group>"; };
+		A6E6E27D2155152000CDECFF /* FreeSubmitVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeSubmitVCViewController.swift; sourceTree = "<group>"; };
+		A6E6E27F215515AD00CDECFF /* VetListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListVC.swift; sourceTree = "<group>"; };
+		A6E6E2812155260500CDECFF /* PaymentCardDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardDetailsVC.swift; sourceTree = "<group>"; };
 		A6E944241F8F83FC0056F902 /* NewMedicalSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMedicalSummaryViewController.swift; sourceTree = "<group>"; };
 		A6EA8CF821511B2300C97292 /* OnlineChoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineChoiceVC.swift; sourceTree = "<group>"; };
 		A6EA8CFA21513B8300C97292 /* FreeQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeQuestionVC.swift; sourceTree = "<group>"; };
@@ -863,7 +869,10 @@
 				A6EA8CF821511B2300C97292 /* OnlineChoiceVC.swift */,
 				A6EA8CFA21513B8300C97292 /* FreeQuestionVC.swift */,
 				A60C064C21520FAD001CB7C7 /* PaidOnlineVetVC.swift */,
-				A660D6AB2153844E000FE303 /* PaidVetListVC.swift */,
+				A6E6E27B2154D79800CDECFF /* FinalConfirmationVC.swift */,
+				A6E6E27D2155152000CDECFF /* FreeSubmitVCViewController.swift */,
+				A6E6E27F215515AD00CDECFF /* VetListVC.swift */,
+				A6E6E2812155260500CDECFF /* PaymentCardDetailsVC.swift */,
 			);
 			name = "Ask a vet online";
 			sourceTree = "<group>";
@@ -920,6 +929,7 @@
 				A6FAE3201F46EFD700FA4EA5 /* OnlineVetServices */,
 				A6FAE31F1F46EFCE00FA4EA5 /* MyContacts */,
 				A6FAE31E1F46EF3A00FA4EA5 /* Book Appointment */,
+				A6EA8CF12151171600C97292 /* Ask a vet online */,
 				A6FADF971F46E96A00FA4EA5 /* MyPets */,
 			);
 			name = Owner;
@@ -931,7 +941,6 @@
 				A659599A1F74EEC5005A706F /* SharePet */,
 				A6FAE3591F46FA9D00FA4EA5 /* Shared */,
 				A6FAE3581F46FA9700FA4EA5 /* Mine */,
-				A6EA8CF12151171600C97292 /* Ask a vet online */,
 			);
 			name = MyPets;
 			sourceTree = "<group>";
@@ -1836,6 +1845,7 @@
 				A6FAE33F1F46F96E00FA4EA5 /* MyProfileViewController.swift in Sources */,
 				A63F15FD1F5E835B00EAA7D6 /* ReminderDetailsViewController.swift in Sources */,
 				A61F694D1F4C65F30051C9AD /* OtherLinksViewController.swift in Sources */,
+				A6E6E27E2155152000CDECFF /* FreeSubmitVCViewController.swift in Sources */,
 				A641756B1F725492009C7F2E /* appointmentDetailscell.m in Sources */,
 				A6FAE2931F46ED1700FA4EA5 /* GalleryListViewController.swift in Sources */,
 				A6FAE22C1F46EB0A00FA4EA5 /* UIImage+MultiFormat.m in Sources */,
@@ -1904,6 +1914,7 @@
 				A6FAE3741F4714F900FA4EA5 /* AdoptionDetailsViewController.swift in Sources */,
 				A6C827CC20187FB700C60556 /* RenewPlanViewController.swift in Sources */,
 				A6FAE1F51F46EABB00FA4EA5 /* TWRChartView.m in Sources */,
+				A6E6E280215515AD00CDECFF /* VetListVC.swift in Sources */,
 				A65959A01F7509E9005A706F /* AddContactViewController.swift in Sources */,
 				A6FAE2B31F46EDC700FA4EA5 /* CBGGraphViewViewController.swift in Sources */,
 				A6FAE30F1F46EED900FA4EA5 /* SurgeryDetailsViewController.swift in Sources */,
@@ -1945,7 +1956,7 @@
 				A6B7B5052086195D0068881E /* SelectPetViewController.swift in Sources */,
 				A6903F1A20C109B000A6FD09 /* AddEditPulseViewController.swift in Sources */,
 				A61F69491F4C65D10051C9AD /* PetSittersLinksViewController.swift in Sources */,
-				A660D6AC2153844E000FE303 /* PaidVetListVC.swift in Sources */,
+				A6E6E27C2154D79800CDECFF /* FinalConfirmationVC.swift in Sources */,
 				A63F15FF1F5E837800EAA7D6 /* ReminderModel.swift in Sources */,
 				A6FAE2E61F46EE9100FA4EA5 /* HospitalizationsListViewController.swift in Sources */,
 				A6FAE1F81F46EABB00FA4EA5 /* TWRDataSet+Strings.m in Sources */,
@@ -1993,6 +2004,7 @@
 				A6FAE3061F46EED000FA4EA5 /* MedicationListViewController.swift in Sources */,
 				A6FAE2E01F46EE8600FA4EA5 /* AddEditConsultationViewController.swift in Sources */,
 				A61F69351F4C328B0051C9AD /* ConfirmNewECViewController.swift in Sources */,
+				A6E6E2822155260500CDECFF /* PaymentCardDetailsVC.swift in Sources */,
 				A6FAE1DA1F46EA2C00FA4EA5 /* LoginViewController.swift in Sources */,
 				A641757A1F726C4C009C7F2E /* EventDetailsViewController.m in Sources */,
 				A61F69331F4C32620051C9AD /* ECBillingViewController.swift in Sources */,
