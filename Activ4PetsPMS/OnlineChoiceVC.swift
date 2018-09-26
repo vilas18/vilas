@@ -23,23 +23,27 @@ class OnlineChoiceVC: UIViewController {
     @IBOutlet weak var freeLbl: UILabel!
     @IBOutlet weak var freeLbl1: UILabel! 
     @IBOutlet weak var freeView: UIView!
+    var petId : String?
+    
     override func viewDidLoad() {
     super.viewDidLoad()
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        var leftItem: UIBarButtonItem?
+        leftItem = UIBarButtonItem(image: UIImage(named: API.Login.NavigationBackImage), style: .done, target: self, action: #selector(self.leftClk))
+        navigationItem.leftBarButtonItem = leftItem
+        let freetapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched1))
+        let paidtapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched2))
+        freetapG.numberOfTapsRequired = 1
+        freetapG.cancelsTouchesInView = false
         
-    let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
-        tapG.numberOfTapsRequired = 1
-        tapG.cancelsTouchesInView = false
-        
-        self.paidIcon.addGestureRecognizer(tapG)
-        self.freeLbl.addGestureRecognizer(tapG)
-        self.freeLbl1.addGestureRecognizer(tapG)
-        self.paidLabel.addGestureRecognizer(tapG)
+        self.paidView.addGestureRecognizer(paidtapG)
+        self.freeView.addGestureRecognizer(freetapG)
         
         self.paidIcon.isUserInteractionEnabled = true
         self.freeLbl.isUserInteractionEnabled = true
         self.freeLbl1.isUserInteractionEnabled = true
         self.paidLabel.isUserInteractionEnabled = true
-        
         
         self.title = "Ask A Vet Online"
         self.paidView.layer.masksToBounds = true
@@ -52,10 +56,21 @@ class OnlineChoiceVC: UIViewController {
         self.freeView.layer.borderColor = UIColor.green.cgColor
         // Do any additional setup after loading the view.
     }
-    @objc func viewTouched(_ sender: Any)
+    @objc func leftClk(_ sender: Any)
     {
-        print("Touched view...")
-        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func viewTouched1(_ sender: Any)
+    {
+        print("Touched free...")
+        self.performSegue(withIdentifier: "FreeVet", sender: self)
+    }
+    
+    @objc func viewTouched2(_ sender: Any)
+    {
+        print("Touched paid...")
+        self.performSegue(withIdentifier: "PaidVet", sender: self)
     }
     
     func imageTapped(tapG : UITapGestureRecognizer){
@@ -68,7 +83,6 @@ class OnlineChoiceVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
