@@ -52,6 +52,7 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
         self.querytextView.delegate = self
         self.querytextView.textColor =  UIColor.lightGray
         self.queryCategory.text = "sick" // this made static please check this ****
+        self.queryCategory.isUserInteractionEnabled = false //please change this ****
         // Do any additional setup after loading the view.
     }
     func prepareUI()

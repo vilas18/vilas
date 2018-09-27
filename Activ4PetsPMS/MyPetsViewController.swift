@@ -1098,7 +1098,7 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             UserDefaults.standard.set(self.selectedPet?.dob, forKey: "PetDob")
             UserDefaults.standard.set(self.selectedPet?.gender, forKey: "PetGender")
             UserDefaults.standard.set(self.selectedPet?.petName, forKey: "PetName")
-            UserDefaults.standard.set(self.selectedPet?.petType, forKey: "PetType")
+            UserDefaults.standard.set(self.selectedPet?.petType, forKey: "PetTypeId")
             UserDefaults.standard.set(self.selectedPet?.customPetType, forKey: "PetTypeOther")
             UserDefaults.standard.set(self.selectedPet?.isInSmo, forKey: "SMO")
             UserDefaults.standard.set(self.selectedPet?.sterile, forKey: "sterile")
@@ -1135,7 +1135,6 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let online: OnlineChoiceVC = self.storyboard?.instantiateViewController(withIdentifier: "OnlineChoice") as! OnlineChoiceVC
             self.navigationController?.pushViewController(online, animated: true)
         })
-        alert.addAction(shared)
         alert.addAction(medical)
         if self.selectedPet?.isInSmo == "1"
         {

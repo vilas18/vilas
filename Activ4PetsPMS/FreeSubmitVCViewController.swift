@@ -46,9 +46,10 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
     var GenderId: String?
     var PetId: String?
     var PetTypeId: String?
-    var query : String?
+    var query : String = "sick"
     var queryCategory : String?
     var isFromFreeVet: Bool?
+    var textFld: UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
@@ -66,7 +67,7 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
         self.PetId = petid
         let petname =  UserDefaults.standard.string(forKey: "SelectedPetName")
         self.petName.text = petname
-        let pettype = UserDefaults.standard.object(forKey: "PetType")
+        let pettype = UserDefaults.standard.object(forKey: "PetTypeId")
         self.PetTypeId = pettype as? String
         let gender = UserDefaults.standard.object(forKey: "PetGender")
         self.petGender.text = gender as? String
@@ -181,20 +182,9 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
     {
         return self.listArr.count
     }
-//    @objc func doneDropDownSelection()
-//    {
-//        if listArr.count > 0
-//        {
-//            let model = listArr[self.dropDownTbl.selectedRow(inComponent: 0)] as? CommonResponseModel
-//            if (dropDownString == "Gender")
-//            {
-//                petGender.text = model?.paramName
-//            }
-//        }
-//    }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-        if textField == self.petGender || textField == self.weight || textField == self.dobText
+        if textField == self.petGender || textField == self.dobText
         {
             let view1 = UIView()
             textField.inputView = view1
@@ -237,6 +227,19 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
             self.dobText.inputAccessoryView = toolbar
             self.dobText.inputView = datePicker
         }
+            else if textField == self.weight
+        {
+            let numberToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+            numberToolbar.barStyle = .blackTranslucent
+            let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(donewithNumberPad))
+            done.tag = textField.tag
+            let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(donewithNumberPad))
+            cancel.tag = textField.tag
+            numberToolbar.items = [cancel, UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), done]
+            numberToolbar.sizeToFit()
+            self.textFld = textField
+            textField.inputAccessoryView = numberToolbar
+        }
         else if textField == self.isSterile
             {
                 let alertControl = UIAlertController(title: "Select Sterile", message: nil, preferredStyle: .actionSheet)
@@ -262,6 +265,10 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
                 alertControl.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
                 navigationController?.present(alertControl, animated: true)
         }
+    }
+    @objc func donewithNumberPad (_ item: UIBarButtonItem)
+    {
+        self.textFld?.resignFirstResponder()
     }
     @objc func cancelDropDownSelection()
         {
@@ -317,11 +324,11 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
                 }
                 else
                 {
-                    petName.layer.borderColor = UIColor.lightGray.cgColor
-                    petGender.layer.borderColor = UIColor.lightGray.cgColor
-                    isSterile.layer.borderColor =  UIColor.lightGray.cgColor
-                    weight.layer.borderColor = UIColor.lightGray.cgColor
-                    dobText.layer.borderColor = UIColor.lightGray.cgColor
+                    petName.layer.borderColor = UIColor.clear.cgColor
+                    petGender.layer.borderColor = UIColor.clear.cgColor
+                    isSterile.layer.borderColor =  UIColor.clear.cgColor
+                    weight.layer.borderColor = UIColor.clear.cgColor
+                    dobText.layer.borderColor = UIColor.clear.cgColor
                     self.webServiceForFree()
                 }
         }
@@ -348,7 +355,7 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
                 let newPhone : String = self.removeSpecialCharsFromString(phone)
                 let userId:String = UserDefaults.standard.string(forKey: "userID")!
                 let email: String = UserDefaults.standard.string(forKey: "UserEmail")! // it may come null handle it ***
-                let dict: [String: Any] = [ "OwnerId" : userId,"FirstName": firstname,"LastName": "" ,"Email": email,"PhoneNumber": newPhone ,"StateId": 3,"PetId": PetId ,"PetTypeId": PetTypeId ,"PetName":self.petName.text!,"IsSpayed": self.isSterile.text!,"IsSubscribed": optoffer ,"PetDob": self.dobText.text!,"GenderId": GenderId ,"Weight": self.weight.text! ,"Question": query,"CategoryId": ""]
+                let dict: [String: Any] = [ "OwnerId" : userId,"FirstName": firstname,"LastName": "" ,"Email": email,"PhoneNumber": newPhone ,"StateId": 3,"PetId": PetId! ,"PetTypeId": PetTypeId! ,"PetName":self.petName.text!,"IsSpayed": self.isSterile.text!,"IsSubscribed": optoffer ,"PetDob": self.dobText.text!,"GenderId": GenderId! ,"Weight": self.weight.text! ,"Question": query as Any,"CategoryId": "2"]
                 print(dict)
                 let requestUrl = URL(string: "http://qapetsvetscom.activdoctorsconsult.com/Vet/AskQuestion") // ** before release change the url to live **
                 var request = URLRequest(url:requestUrl!)
@@ -385,9 +392,9 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
                                 {
 //                                  "message" = "Question successfully raised"
                                     MBProgressHUD.hide(for: self.view, animated: true)
-//                                    let thanks: ThankYouSMOECViewController? = segue.destination as? ThankYouSMOECViewController
-//                                    let thanks: ThankYouSMOECViewController? =
-//                                    thanks?.isFromFreeVet = true
+                                    let thanks : ThankYouSMOECViewController = self.storyboard?.instantiateViewController(withIdentifier: "FreeFinal") as! ThankYouSMOECViewController
+                                    self.navigationController?.pushViewController(thanks, animated: true)
+                                    thanks.isFromFreeVet = true
                                 }
                                 else
                                 {

@@ -146,7 +146,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/AddEditHemoglobinViewController.swift"
-                  timestampString = "559735014.998125"
+                  timestampString = "559743694.970266"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "209"
@@ -161,7 +161,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/AddEditHemoglobinViewController.swift"
-                  timestampString = "559735015.001681"
+                  timestampString = "559743694.973238"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "209"
@@ -210,7 +210,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/NewNotificationsListViewController.swift"
-                  timestampString = "559735015.019207"
+                  timestampString = "559743694.990326"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "313"
@@ -225,7 +225,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/NewNotificationsListViewController.swift"
-                  timestampString = "559735015.023335"
+                  timestampString = "559743694.993479"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "315"
@@ -274,7 +274,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/NewNotificationsListViewController.swift"
-                  timestampString = "559735015.037043"
+                  timestampString = "559743695.008726"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "364"
@@ -289,7 +289,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/NewNotificationsListViewController.swift"
-                  timestampString = "559735015.040555"
+                  timestampString = "559743695.012279"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "366"
@@ -434,7 +434,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/SignUpViewController.swift"
-            timestampString = "559639679.557597"
+            timestampString = "559743683.0766979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -450,7 +450,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/SignUpViewController.swift"
-            timestampString = "559639679.55774"
+            timestampString = "559743683.077224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "148"
@@ -722,7 +722,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.660671"
+            timestampString = "559743683.078102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1644"
@@ -738,7 +738,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.6615551"
+            timestampString = "559743683.079677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1650"
@@ -754,7 +754,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.662208"
+            timestampString = "559743683.0805171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1655"
@@ -962,7 +962,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/SignUpViewController.swift"
-            timestampString = "559639679.5602469"
+            timestampString = "559743683.081803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "744"
@@ -978,7 +978,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/SignUpViewController.swift"
-            timestampString = "559639679.560473"
+            timestampString = "559743683.081928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "643"
@@ -994,7 +994,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/SignUpViewController.swift"
-            timestampString = "559639679.560558"
+            timestampString = "559743683.082054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "733"
@@ -1010,7 +1010,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/ConfirmNewSMOViewController.swift"
-            timestampString = "559402087.432924"
+            timestampString = "559742461.976225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -1074,7 +1074,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.663901"
+            timestampString = "559743683.082273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1327"
@@ -1090,7 +1090,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.665067"
+            timestampString = "559743683.082868"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1332"
@@ -1106,7 +1106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.665886"
+            timestampString = "559743683.083498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1337"
@@ -1122,7 +1122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.6663589"
+            timestampString = "559743683.084084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1421"
@@ -1138,7 +1138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.66686"
+            timestampString = "559743683.0846961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1346"
@@ -1154,7 +1154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/AddEditPetViewController.swift"
-            timestampString = "559734970.667293"
+            timestampString = "559743683.085256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "330"
@@ -1170,7 +1170,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/AddEditPetViewController.swift"
-                  timestampString = "559735015.561808"
+                  timestampString = "559743695.93112"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "330"
@@ -1185,7 +1185,7 @@
                   moduleName = "Activ4Pets"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/AddEditPetViewController.swift"
-                  timestampString = "559735015.5667059"
+                  timestampString = "559743695.935096"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "330"
@@ -1193,22 +1193,6 @@
                   offsetFromSymbolStart = "84728">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/OnlineChoiceVC.swift"
-            timestampString = "559660543.078207"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "viewTouched1(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1234,7 +1218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/ConfirmNewSMOViewController.swift"
-            timestampString = "559402087.43762"
+            timestampString = "559742461.9797111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "284"
@@ -1265,108 +1249,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/OnlineChoiceVC.swift"
-            timestampString = "559660543.078637"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "viewTouched2(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/FreeQuestionVC.swift"
-            timestampString = "559734970.667869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "submit(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/FreeQuestionVC.swift"
-            timestampString = "559734970.668642"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
-            landmarkName = "doValidationForEmptyField()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/FreeSubmitVCViewController.swift"
-            timestampString = "559719734.910791"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "viewTouched(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/FreeSubmitVCViewController.swift"
-            timestampString = "559719734.910861"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "viewTouched(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.911005"
+            timestampString = "559743683.086375"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "textFieldDidBeginEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.9111249"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "keyboardInputShouldDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1378,11 +1266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.911213"
+            timestampString = "559743683.086496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "changeTextFieldFocus(toNextTextField:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1393,44 +1281,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.9113131"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.911411"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
-            landmarkName = "checkEnglishPhoneNumberFormat(string:str:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/FreeQuestionVC.swift"
-            timestampString = "559734970.669651"
+            timestampString = "559743683.0866359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "textFieldDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1441,56 +1297,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.9119771"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "getList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.912105"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
-            landmarkName = "getList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.9122241"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
-            landmarkName = "getList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/EditAddContactViewController.swift"
-            timestampString = "559734970.6706311"
+            timestampString = "559738716.959239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "364"
@@ -1506,7 +1314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/EditAddContactViewController.swift"
-            timestampString = "559734970.671479"
+            timestampString = "559738716.959729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "357"
@@ -1522,7 +1330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/EditAddContactViewController.swift"
-            timestampString = "559734970.6721179"
+            timestampString = "559738716.960107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "351"
@@ -1538,7 +1346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/EditAddContactViewController.swift"
-            timestampString = "559734970.672801"
+            timestampString = "559738716.96047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "947"
@@ -1554,7 +1362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/EditAddContactViewController.swift"
-            timestampString = "559734970.673592"
+            timestampString = "559738716.960831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "966"
@@ -1570,7 +1378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/EditAddContactViewController.swift"
-            timestampString = "559734970.674482"
+            timestampString = "559738716.961172"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "985"
@@ -1585,92 +1393,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.914971"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "doneDropDownSelection()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.915063"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
-            landmarkName = "doneDropDownSelection()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Activ4Pets.PaidOnlineVetVC.doneDropDownSelection() -&gt; ()"
-                  moduleName = "Activ4Pets"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/PaidOnlineVetVC.swift"
-                  timestampString = "559735015.753858"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "250"
-                  endingLineNumber = "250"
-                  offsetFromSymbolStart = "2264">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Activ4Pets.PaidOnlineVetVC.doneDropDownSelection() -&gt; ()"
-                  moduleName = "Activ4Pets"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ActivDoctorsOnline/Desktop/Activ4PetsPMS/Activ4PetsPMS/PaidOnlineVetVC.swift"
-                  timestampString = "559735015.7577471"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "250"
-                  endingLineNumber = "250"
-                  offsetFromSymbolStart = "3128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
-            timestampString = "559719734.915146"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "textFieldDidBeginEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/FreeQuestionVC.swift"
-            timestampString = "559734970.6753449"
+            timestampString = "559743683.08693"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "GetQueryCategories()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1682,11 +1410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/FreeQuestionVC.swift"
-            timestampString = "559734970.676245"
+            timestampString = "559743683.0871021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "GetQueryCategories()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1698,12 +1426,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activ4PetsPMS/FreeQuestionVC.swift"
-            timestampString = "559734970.6772341"
+            timestampString = "559743683.087256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "GetQueryCategories()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
+            timestampString = "559743683.087402"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
+            landmarkName = "doValidationsForUpdateDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activ4PetsPMS/PaidOnlineVetVC.swift"
+            timestampString = "559743683.087503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "doValidationsForUpdateDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activ4PetsPMS/FreeSubmitVCViewController.swift"
+            timestampString = "559743683.0876319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "textFieldShouldReturn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activ4PetsPMS/FreeSubmitVCViewController.swift"
+            timestampString = "559743683.088209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

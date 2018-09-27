@@ -105,6 +105,20 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
         let model = listArr[row]
         return (model as AnyObject).paramName
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        if textField == self.phoneTxt
+        {
+            let newStr: NSString = textField.text! as NSString
+            let currentString: String = newStr.replacingCharacters(in: range, with: string)
+            let length: Int = (currentString.count )
+            if length > 11
+            {
+                return false
+            }
+        }
+        return true
+    }
      func textFieldDidBeginEditing(_ textField: UITextField)
         {
             if textField == self.timeZone
@@ -177,58 +191,6 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
             self.disclamairOk = false
         }
     }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-    {
-        let str = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-            if ok == true  //no popupview is present
-        {
-            if (string.count ) > 0 && !Scanner(string: string).scanInt32(nil)
-            {
-                return false
-            }
-            if textField.text?.count == 0
-            {
-                perform(#selector(self.changeTextFieldFocus(toNextTextField:)), with: textField, afterDelay: 0.1)
-            }
-            let length: Int = (str.count )
-            if length > 1 {
-                return false
-            }
-        }
-        else if textField == phoneTxt
-        {
-            self.textFld = phoneTxt
-            return checkEnglishPhoneNumberFormat(string: string, str: str)
-        }
-        return true
-    }
-    func checkEnglishPhoneNumberFormat(string: String?, str: String?) -> Bool
-    {
-        if string == ""
-        {
-            return true
-        }
-        else if str!.count < 3
-        {
-            if str!.count == 1{
-                
-                self.phoneTxt?.text =  "(" + (self.phoneTxt?.text)!
-            }
-        }
-        else if str!.count == 5
-        {
-            self.phoneTxt?.text = (self.phoneTxt?.text!)! + ") "
-        }
-        else if str!.count == 10
-        {
-            self.phoneTxt?.text = (self.phoneTxt?.text!)! + "-"
-        }
-        else if str!.count > 14
-        {
-            return false
-        }
-        return true
-    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resignFirstResponder()
         textField.resignFirstResponder()
@@ -284,7 +246,7 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
                             else if (self.dropDownType == "State")
                             {
                                 let model = CommonResponseModel()
-                                if self.countryId != "" && self.countryId == dict["ConversationId"] as! String // please send countryId for United steates ***
+                                if self.countryId != "" && self.countryId == dict["ConversationId"] as! String 
                                 {
                                     model.paramID = (dict["Id"] as! NSNumber).stringValue
                                     model.paramName = dict["Name"] as! String?
@@ -425,28 +387,28 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
                     }
                 }
             }
-            else if textField == phoneTxt
-            {
-                if textField.text?.count == 0
-                {
-                    print("Nmber is correct...")
-                }
-                else
-                {
-                    let numberReg: String = "^[(]?[1-9][0-9]{2}[)]?[ -]?[0-9]{3}[ -]?[0-9]{4}$"
-                    let numberTest = NSPredicate(format: "SELF MATCHES %@", numberReg)
-                    if numberTest.evaluate(with: textField.text) == false
-                    {
-                        textField.layer.borderColor = UIColor.red.cgColor
-                    }
-                    else
-                    {
-                        textField.layer.borderColor = UIColor.clear.cgColor
-                        self.textFld = phoneTxt
-                        print("Nmber is correct...")
-                    }
-                }
-            }
+//            else if textField == phoneTxt
+//            {
+//                if textField.text?.count == 0
+//                {
+//                    print("Nmber is correct...")
+//                }
+//                else
+//                {
+//                    let numberReg: String = "^[(]?[1-9][0-9]{2}[)]?[ -]?[0-9]{3}[ -]?[0-9]{4}$"
+//                    let numberTest = NSPredicate(format: "SELF MATCHES %@", numberReg)
+//                    if numberTest.evaluate(with: textField.text) == false
+//                    {
+//                        textField.layer.borderColor = UIColor.red.cgColor
+//                    }
+//                    else
+//                    {
+//                        textField.layer.borderColor = UIColor.clear.cgColor
+//                        self.textFld = phoneTxt
+//                        print("Nmber is correct...")
+//                    }
+//                }
+//            }
         }
 
     override func didReceiveMemoryWarning() {
