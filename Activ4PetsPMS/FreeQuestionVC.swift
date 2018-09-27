@@ -51,6 +51,7 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
         querytextView.isUserInteractionEnabled = true
         self.querytextView.delegate = self
         self.querytextView.textColor =  UIColor.lightGray
+        self.queryCategory.text = "sick" // this made static please check this ****
         // Do any additional setup after loading the view.
     }
     func prepareUI()
@@ -174,13 +175,7 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
                     var filtered = [[String : Any]]()
                     DispatchQueue.main.async
                         {
-                            let detailsArr = response as! [[String:Any]]
-                            for dict in detailsArr
-                            if queryDic.count == 0
-                            {
-                                MBProgressHUD.hide(for: self.view, animated: true)
-                            }
-                            else
+                            if queryDic.count != 0
                             {
                                 for item in queryDic
                                 {
@@ -194,22 +189,27 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
                                         {
                                             prunedDictionary[key] = ""
                                         }
+                                    }
+                                    print(prunedDictionary)
+                                    filtered.append(prunedDictionary)
                                 }
-                                print(prunedDictionary)
-                                filtered.append(prunedDictionary)
+                                for item in filtered
+                                {
+                                    let model = CommonResponseModel()
+                                    model.paramID = ((item["Id"] as! NSNumber).stringValue)
+                                    model.paramName = (item["Category"] as! String)
+                                    self.listArr.append(model)
+                                    print(model.paramName)
+                                    print(model.paramID)
+                                }
+                                self.dropDownTbl.reloadAllComponents()
+                                MBProgressHUD.hide(for: self.view, animated: true)
                             }
-                            for item in filtered
+                            else
                             {
-                                let model = CommonResponseModel()
-                                model.paramID = ((item["Id"] as! NSNumber).stringValue)
-                                model.paramName = (item["Category"] as! String)
-                                self.listArr.append(model)
-                                print(model.paramName)
-                                print(model.paramID)
-                              }
-                        }
-                            self.dropDownTbl.reloadAllComponents()
-                            MBProgressHUD.hide(for: self.view, animated: true)
+                                 MBProgressHUD.hide(for: self.view, animated: true)
+                            }
+                            
                     }
             }
             else
