@@ -81,9 +81,7 @@ class SharedPetsListViewController: UIViewController, UITableViewDelegate, UITab
     @objc func leftClk(sender: AnyObject)
     {
         self.navigationController?.popViewController(animated: true)
-        
     }
-    
     @objc func rightClk1(sender: AnyObject)
     {
         let AddContact:  AddContactViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddContact") as! AddContactViewController

@@ -285,9 +285,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate
         
         if string == ""
         {
-            
             return true
-            
         }
         else if str!.count < 3
         {
@@ -312,7 +310,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate
         {
             return false
         }
-        
         return true
     }
     func doValidationForStringMatch() -> Bool

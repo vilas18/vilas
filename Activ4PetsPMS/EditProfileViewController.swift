@@ -158,7 +158,6 @@ class EditProfileViewController: UIViewController,  UITextFieldDelegate, UIPicke
             self.isAppearIn?.isOn = false
             self.isSearchable = "false"
         }
-        
         self.emailTxtfld?.text = self.model?.email
         self.timeZoneTxtfld?.text = self.model?.timeZone
         self.clientAccountId?.text = self.model?.clientId
@@ -184,8 +183,6 @@ class EditProfileViewController: UIViewController,  UITextFieldDelegate, UIPicke
         {
             self.secondTxtfld?.text = self.model?.secondary
         }
-        
-        
         self.timeZoneId = (self.model?.timeZoneId)!
         self.genderId = (self.model?.genderId)!
         self.countryId = (self.model?.countryId)!
@@ -553,6 +550,7 @@ class EditProfileViewController: UIViewController,  UITextFieldDelegate, UIPicke
                 print("response", response)
                 DispatchQueue.main.async(execute: {() -> Void in
                     let detailsArr = response as? [[String:Any]] ?? []
+                    print(detailsArr)
                     for dict in detailsArr
                     {
                         if (self.dropDownType == "TimeZone") {

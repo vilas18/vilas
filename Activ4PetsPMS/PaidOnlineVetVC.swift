@@ -17,7 +17,7 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
     @IBOutlet weak var disclaimerBtn: UIButton!
     @IBOutlet weak var proceed: UIButton!
     var ok : Bool = true
-    var countryId: String = ""
+    var countryId: String = "3"
     var stateId: String = ""
     var listArr = [Any]()
     var dropDownType: String = ""
@@ -29,6 +29,9 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
     var disclamairOk: Bool =  false
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.listTv = UIPickerView.init(frame: CGRect(x:0, y:0, width:0, height: 220))
+        listTv.delegate = self
+        listTv.dataSource = self
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.setNavigationBarHidden(false, animated: true)
         var leftItem: UIBarButtonItem?
@@ -39,6 +42,8 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
         tapG.cancelsTouchesInView = false
         view.addGestureRecognizer(tapG)
         self.title = "Ask a Vet Online"
+        self.phoneTxt.isUserInteractionEnabled = true
+        self.emailtxt.isUserInteractionEnabled = true
         prepareUI()
         // Do any additional setup after loading the view.
     }
@@ -53,8 +58,6 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
             phoneTxt.layer.borderWidth = 2
             phoneTxt.layer.cornerRadius = 3.0
             phoneTxt.layer.borderColor = UIColor.clear.cgColor
-            self.phoneTxt.isUserInteractionEnabled = true
-            self.emailtxt.isUserInteractionEnabled = true
             proceed.layer.masksToBounds = true
             proceed.layer.borderWidth = 2
             proceed.layer.cornerRadius = 3.0
@@ -97,6 +100,11 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
         {
             return self.listArr.count
         }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        let model = listArr[row]
+        return (model as AnyObject).paramName
+    }
      func textFieldDidBeginEditing(_ textField: UITextField)
         {
             if textField == self.timeZone
@@ -120,7 +128,7 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
             }
             else if textField == self.statetxt
             {
-                self.textFld = textField
+                textFld = textField
                 dropDownType = "State"
                 self.listArr = []
                 self.listTv.reloadAllComponents()
@@ -240,7 +248,7 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
                 {
                     statetxt?.text = model?.paramName
                     stateId = (model?.paramID)!
-    //                stateCountryID = (model?.paramSubID)!
+//                    stateCountryID = (model?.paramSubID)!
                 }
                 self.textFld?.resignFirstResponder()
                 self.view.endEditing(true)

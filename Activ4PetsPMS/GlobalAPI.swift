@@ -12,11 +12,11 @@ struct API
 {
     //  Live server
     
-    static let BaseUrl = "http://ftp.activ4pets.es:8290/api/"
+//   static let BaseUrl = "http://ftp.activ4pets.es:8290/api/"
     
     // qa server
     
-// static let BaseUrl = "http://qapetspms.activdoctorsconsult.com:8082/api/"
+    static let BaseUrl = "http://qapetspms.activdoctorsconsult.com:8082/api/"
     
     struct Login       
     {

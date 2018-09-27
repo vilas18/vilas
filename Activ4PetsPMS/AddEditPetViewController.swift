@@ -12,7 +12,6 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
 {
     
     var petInfo: MyPetsModel?
-    
     var base64Data: Data?
     var patientID: String = ""
     var dataString: String = ""
@@ -645,7 +644,6 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
                 DispatchQueue.main.async
                     {
                         let detailsArr = response as! [[String:Any]]
-                        
                         for dict in detailsArr
                         {
                             if (self.dropDownString == "Color") {
@@ -964,92 +962,8 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
     {
         let model = listArr[row] as? CommonResponseModel
         return model?.paramName
-        
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,inComponent component: Int)
-    {
-        //        if listArr.count > 0
-        //        {
-        //            let model = listArr[row] as? CommonResponseModel
-        //            if (dropDownString == "Country")
-        //            {
-        //                countryTxtF.text = model?.paramName
-        //                countryID = (model?.paramID)!
-        //                stateTxtF.text = ""
-        //                stateID = ""
-        //            }
-        //            else if (dropDownString == "State")
-        //            {
-        //                stateTxtF.text = model?.paramName
-        //                stateID = (model?.paramID)!
-        //                stateCountryID = (model?.paramSubID)!
-        //            }
-        //            else if (dropDownString == "PetType")
-        //            {
-        //                petTypeTxtF.text = model?.paramName
-        //                petTypeID = (model?.paramID)!
-        //                petBloodTypeTxtF.text = ""
-        //                if CInt(petTypeID) == 11 || (petTypeTxtF.text == "Other") {
-        //                    otherPetTypeTxtF.alpha = 1.0
-        //                    otherPetTypeTxtF.isUserInteractionEnabled = true
-        //                }
-        //                else {
-        //                    otherPetTypeTxtF.alpha = 0.5
-        //                    otherPetTypeTxtF.isUserInteractionEnabled = false
-        //                }
-        //            }
-        //            if (dropDownString == "Gender")
-        //            {
-        //                petGenderTxtF.text = model?.paramName
-        //                genderID = (model?.paramID)!
-        //                //self.petGenderTxtF.resignFirstResponder()
-        //            }
-        //            else if (dropDownString == "BloodGroupType")
-        //            {
-        //                petBloodTypeTxtF.text = model?.paramName
-        //                bloodTypeID = (model?.paramID)!
-        //            }
-        //            else if (dropDownString == "HairType")
-        //            {
-        //                hairTypeTxtF.text = model?.paramName
-        //                hairTypeID = (model?.paramID)!
-        //                if CInt(hairTypeID) == 4 || (hairTypeTxtF.text == "Other") {
-        //                    otherHairTypeTxtF.alpha = 1.0
-        //                    otherHairTypeTxtF.isUserInteractionEnabled = true
-        //                }
-        //                else {
-        //                    otherHairTypeTxtF.alpha = 0.5
-        //                    otherHairTypeTxtF.isUserInteractionEnabled = false
-        //                }
-        //            }
-        //            else if (dropDownString == "Color")
-        //            {
-        //                colorTxtF.text = model?.paramName
-        //                colorID = (model?.paramID)!
-        //                if CInt(colorID) == 5 || (colorTxtF.text == "Other") {
-        //                    otherColorTypeTxtF.alpha = 1.0
-        //                    otherColorTypeTxtF.isUserInteractionEnabled = true
-        //                }
-        //                else {
-        //                    otherColorTypeTxtF.alpha = 0.5
-        //                    otherColorTypeTxtF.isUserInteractionEnabled = false
-        //                }
-        //            }
-        //            else if (dropDownString == "SecondaryColor")
-        //            {
-        //                secondaryColorTxtF.text = model?.paramName
-        //                secondaryColorID = (model?.paramID)!
-        //                if CInt(secondaryColorID) == 5 || (secondaryColorTxtF.text == "Other") {
-        //                    otherSecondaryColorTypeTxtF.alpha = 1.0
-        //                    otherSecondaryColorTypeTxtF.isUserInteractionEnabled = true
-        //                }
-        //                else {
-        //                    otherSecondaryColorTypeTxtF.alpha = 0.5
-        //                    otherSecondaryColorTypeTxtF.isUserInteractionEnabled = false
-        //                }
-        //            }
-        //        }
-    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == petNameTxtF {
             customBreedTxtF.becomeFirstResponder()
@@ -1983,8 +1897,6 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
             {
                 countryTxtF.text = model?.paramName
                 countryID = (model?.paramID)!
-                stateTxtF.text = ""
-                stateID = ""
             }
             else if (dropDownString == "State")
             {

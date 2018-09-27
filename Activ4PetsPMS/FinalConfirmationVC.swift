@@ -42,6 +42,7 @@ class FinalConfirmationVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         var leftItem: UIBarButtonItem?
         leftItem = UIBarButtonItem(image: UIImage(named: API.Login.NavigationBackImage), style: .done, target: self, action: #selector(self.leftClk))
+        
         navigationItem.leftBarButtonItem = leftItem
         let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
         tapG.numberOfTapsRequired = 1

@@ -143,7 +143,6 @@ class MyPetsModel: NSObject
         self.canModCont = canModCont
         self.canModVet = canModVet
         self.canModGall = canModGall
-        
     }
 }
 
@@ -183,6 +182,10 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         rightItem1 = UIBarButtonItem(image: UIImage(named: "ic_menu.png"), style: .done, target: self, action: #selector(self.rightClk1))
         navigationItem.rightBarButtonItem = rightItem1
         rightItem2 = UIBarButtonItem(image: UIImage(named: "plus.png"), style: .done, target: self, action: #selector(self.rightClk2))
+        let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
+        tapG.numberOfTapsRequired = 1
+        tapG.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapG)
         navigationItem.rightBarButtonItems = [rightItem1!, rightItem2!]
         noDataLbl = UILabel(frame: CGRect(x: 0, y: self.view.center.y, width: 250, height: 50))
         noDataLbl?.font = UIFont.systemFont(ofSize: 17.0)
@@ -320,11 +323,12 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         else {
             // getPopupCount()
         }
-        
-        
         // Do any additional setup after loading the view.
     }
-    
+    @objc func viewTouched()
+    {
+     resignFirstResponder()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.mineShared.selectedSegmentIndex = 0
@@ -373,7 +377,6 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         else if UserDefaults.standard.bool(forKey: "IsPhoneVerified") == false && UserDefaults.standard.string(forKey: "UserPhoneNumber") != "" && UserDefaults.standard.string(forKey: "UserPhoneNumber") != nil && UserDefaults.standard.string(forKey: "UserPhoneNumber")?.count != 0
         {
             let alert = UIAlertController(title: "Alert!", message: "Your mobile number is not verified with Activ4Pets.\n Please verify it for further communications.", preferredStyle: .alert)
-            
             let ok = UIAlertAction(title: "Verify", style: .default, handler: {(_ action: UIAlertAction) -> Void in
                 let storyboard13 = UIStoryboard(name: "Main_iPhone", bundle: nil)
                 let destViewController = storyboard13.instantiateViewController(withIdentifier: "myaccount") as? MyProfileViewController
@@ -381,7 +384,6 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.navigationController?.pushViewController(destViewController!, animated: true)
             })
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
-                
             })
             alert.addAction(ok)
             alert.addAction(cancel)
@@ -883,7 +885,8 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.getMaxPetCountCount()
             
         }
-        else {
+        else
+        {
             print("No internet connection")
             MBProgressHUD.hide(for: self.view, animated: true)
         }
@@ -1078,53 +1081,8 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.shareBtn.tag = Int(truncating: pets.petId!)
         //print(pets.imagePath)
         cell.shareBtn.addTarget(self, action: #selector(self.viewMenuClk), for: .touchUpInside)
-        //        var petImageString: String = (pets.imagePath)!
-        //        petImageString = petImageString.trimmingCharacters(in: CharacterSet.whitespaces)
-        //        petImageString = petImageString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        //        cell.petImage.sd_setImage(with: NSURL(string: petImageString)! as URL!, placeholderImage: UIImage(named: "petImage-default.png")!, options: SDWebImageOptions(rawValue: 1))
         cell.petImage.imageFromServerURL(urlString: (pets.imagePath)!, defaultImage: "petImage-default.png")
-        
-        //        let cacheKey = indexPath.row
-        //        if(imageCache.object(forKey: cacheKey as AnyObject) != nil)
-        //        {
-        //            cell.petImage.image = imageCache.object(forKey: cacheKey as AnyObject) as? UIImage
-        //        }
-        //        else
-        //        {
-        //             DispatchQueue.global(qos: .background).async
-        //                           {
-        //                if let url = NSURL(string: (pets.imagePath)!) {
-        //                    if let data = NSData(contentsOfURL: url as URL) {
-        //                        let image: UIImage = UIImage(data: data)!
-        //                        imageCache.setObject(image, forKey: cacheKey as AnyObject)
-        //                        dispatch_async(dispatch_get_main_queue(), {
-        //                            cell.petImage.image = image
-        //                        })
-        //                    }
-        //                }
-        //            }
-        //        }
-        
-        //        var petImageUrl: String =  (pets.imagePath)!
-        //        petImageUrl = petImageUrl.trimmingCharacters(in: CharacterSet.whitespaces)
-        //        petImageUrl = petImageUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        //        if let url = NSURL(string: petImageUrl)
-        //        {
-        //            if let data = NSData(contentsOf: url as URL)
-        //            {
-        //                cell.petImage.image = UIImage(data: data as Data)
-        //            }
-        //            else
-        //            {
-        //                cell.petImage.image = UIImage(named: "petImage-default.png")
-        //            }
-        //        }
-        //        else
-        //        {
-        //            cell.petImage.image = UIImage(named: "petImage-default.png")
-        //        }
         return cell
-        
     }
     @objc func viewMenuClk(sender: AnyObject)
     {
@@ -1135,7 +1093,6 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.selectedPet = self.petModelList[(indexPath?.row)!]
             UserDefaults.standard.set(self.selectedPet?.petId, forKey: "SelectedPet")
             UserDefaults.standard.set(self.selectedPet?.petName, forKey: "SelectedPetName")
-            UserDefaults.standard.set(self.selectedPet?.petId, forKey: "SelectedPet")
             UserDefaults.standard.set(self.selectedPet?.imagePath, forKey: "PetProfile")
             UserDefaults.standard.set(self.selectedPet?.bloodType, forKey: "PetBlood")
             UserDefaults.standard.set(self.selectedPet?.dob, forKey: "PetDob")
@@ -1143,11 +1100,9 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             UserDefaults.standard.set(self.selectedPet?.petName, forKey: "PetName")
             UserDefaults.standard.set(self.selectedPet?.petType, forKey: "PetType")
             UserDefaults.standard.set(self.selectedPet?.customPetType, forKey: "PetTypeOther")
-            
             UserDefaults.standard.set(self.selectedPet?.isInSmo, forKey: "SMO")
+            UserDefaults.standard.set(self.selectedPet?.sterile, forKey: "sterile")
             UserDefaults.standard.set(false, forKey: "SharedPet")
-            UserDefaults.standard.synchronize()
-            
             UserDefaults.standard.synchronize()
             print("\(String(describing:  self.selectedPet?.petId))")
         }
@@ -1175,7 +1130,8 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
         })
-        let cancel = UIAlertAction(title: "Ask A Vet Online", style: .cancel, handler: {(action: UIAlertAction) -> Void in
+        let askVet = UIAlertAction(title: "Ask A Vet Online", style: .default, handler: {(action: UIAlertAction) -> Void in
+            print("\(String(describing: self.selectedPet?.petName))")
             let online: OnlineChoiceVC = self.storyboard?.instantiateViewController(withIdentifier: "OnlineChoice") as! OnlineChoiceVC
             self.navigationController?.pushViewController(online, animated: true)
         })
@@ -1189,7 +1145,7 @@ class MyPetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             alert.addAction(remove)
         }
-        alert.addAction(cancel)
+        alert.addAction(askVet)
         alert.popoverPresentationController?.sourceView = self.view
         alert.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
         alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)

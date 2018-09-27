@@ -16,7 +16,6 @@
                                @"cache-control": @"no-cache"
                                };
     NSString *urlStr=[NSString stringWithFormat:@"%@?Type=%@",GetTypes,type];
-    
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
     [request setAllHTTPHeaderFields:headers];
     NSURLSession *session=[NSURLSession sharedSession];

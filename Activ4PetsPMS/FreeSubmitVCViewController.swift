@@ -56,6 +56,7 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
         navigationController?.setNavigationBarHidden(false, animated: true)
         var leftItem: UIBarButtonItem?
         leftItem = UIBarButtonItem(image: UIImage(named: API.Login.NavigationBackImage), style: .done, target: self, action: #selector(self.leftClk))
+        
         navigationItem.leftBarButtonItem = leftItem
         petName.isUserInteractionEnabled = false
         weight.isUserInteractionEnabled = true

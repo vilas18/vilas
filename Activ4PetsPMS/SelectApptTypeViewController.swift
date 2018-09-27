@@ -94,8 +94,7 @@ class SelectApptTypeViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     @objc func showOptions(_ sender: UIButton)
-    {
-        
+      {
         if sender.isSelected == true
         {
             sender.isSelected = false

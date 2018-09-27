@@ -12,7 +12,7 @@ class ThankYouSMOECViewController: UIViewController
 {
     var isFromEC: Bool = false
     var isFromSMO: Bool = false
-    
+    var isFromFreeVet : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,10 +32,18 @@ class ThankYouSMOECViewController: UIViewController
                     navigationController?.popToViewController(controller, animated: true)
                 }
             }
-            else if isFromSMO == true {
+            else if isFromFreeVet == true
+            {
+                let MyPets: MyPetsViewController = self.storyboard?.instantiateViewController(withIdentifier: "MyPets") as! MyPetsViewController
+                self.navigationController?.pushViewController(MyPets, animated: true)
+                break
+             }
+            else if isFromSMO == true
+            {
                 if (controller is SMOListViewController) {
                     navigationController?.popToViewController(controller, animated: true)
                 }
+                
             }
         }
     }

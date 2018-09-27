@@ -68,7 +68,6 @@ class MyProfileModel: NSObject
         self.emailVerified = emailVerified
         self.mobileVerified = mobileVerified
         self.changeEmail = changeEmail
-        
     }
 }
 
@@ -481,39 +480,9 @@ class MyProfileViewController: UIViewController, UITextFieldDelegate
                                 self.resendLink.isHidden = true
                                 self.changeEmailTopSpace.constant = -1
                             }
-                            //                    if self.model?.emailVerified == false && self.model?.mobileVerified == false && self.model?.primary?.count != 0 && self.model?.primary != nil && self.model?.primary != ""
-                            //                    {
-                            //                        let alert = UIAlertController(title: "Alert!", message: "Your email and mobile number are not verified with Activ4Pets.\n Please verify them for further communications.", preferredStyle: .alert)
-                            //                        let cancel = UIAlertAction(title: "Ok", style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
-                            //                            
-                            //                        })
-                            //                        alert.addAction(cancel)
-                            //                        self.present(alert, animated: true)
-                            //                    }
-                            //                    else if self.model?.emailVerified == false
-                            //                    {
-                            //                        let alert = UIAlertController(title: "Alert!", message: "Your email is not verified with Activ4Pets.\n Please verify it for further communications.", preferredStyle: .alert)
-                            //                        let cancel = UIAlertAction(title: "Ok", style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
-                            //                            
-                            //                        })
-                            //                        alert.addAction(cancel)
-                            //                        self.present(alert, animated: true)
-                            //                    }
-                            //                    else if self.model?.mobileVerified == false && self.model?.primary?.count != 0 && self.model?.primary != nil && self.model?.primary != ""
-                            //                    {
-                            //                        let alert = UIAlertController(title: "Alert!", message: "Your mobile number is not verified with Activ4Pets.\n Please verify it for further communications.", preferredStyle: .alert)
-                            //                        let cancel = UIAlertAction(title: "Ok", style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
-                            //                            
-                            //                        })
-                            //                        alert.addAction(cancel)
-                            //                        self.present(alert, animated: true)
-                            //                    }
+                            
                             UserDefaults.standard.set((self.model?.profilePic)!, forKey: "ProfilePicUrl")
                             self.profilePic.imageFromServerURL(urlString: (self.model?.profilePic)!, defaultImage: "ic_user_prof")
-                            //                    var petImageString: String = (self.model?.profilePic)!
-                            //                        petImageString = petImageString.trimmingCharacters(in: CharacterSet.whitespaces)
-                            //                        petImageString = petImageString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-                            //                        self.profilePic.sd_setImage(with: NSURL(string: petImageString)! as URL!, placeholderImage: UIImage(named: "profile-icon.png")!, options: SDWebImageOptions(rawValue: 1))
                             MBProgressHUD.hide(for: self.view, animated: true)
                         }
                 }

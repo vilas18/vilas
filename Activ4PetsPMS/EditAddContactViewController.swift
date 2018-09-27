@@ -44,8 +44,6 @@ class EditAddContactViewController: UIViewController, UITextFieldDelegate, UITex
     
     @IBOutlet weak var isEmerg: UISwitch?
     var listTv: UIPickerView!
-    
-    
     var datePicker = UIDatePicker()
     @IBOutlet weak var mandatoryLbl: UILabel?
     

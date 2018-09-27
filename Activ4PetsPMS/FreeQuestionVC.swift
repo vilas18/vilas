@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
+class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIPickerViewDelegate, UIPickerViewDataSource
 {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var querytextView: UITextView!
@@ -31,6 +31,9 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
         navigationController?.setNavigationBarHidden(false, animated: true)
         var leftItem: UIBarButtonItem?
         leftItem = UIBarButtonItem(image: UIImage(named: API.Login.NavigationBackImage), style: .done, target: self, action: #selector(self.leftClk))
+        self.listTv = UIPickerView.init(frame: CGRect(x:0, y:0, width:0, height: 220))
+        listTv.delegate = self
+        listTv.dataSource = self
         navigationItem.leftBarButtonItem = leftItem
         let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
         tapG.numberOfTapsRequired = 1
@@ -48,7 +51,6 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
         querytextView.isUserInteractionEnabled = true
         self.querytextView.delegate = self
         self.querytextView.textColor =  UIColor.lightGray
-        self.queryCategory.text = "sick"  // *** only for testing please delete this line ***
         // Do any additional setup after loading the view.
     }
     func prepareUI()
@@ -71,7 +73,7 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
         queryCategory.layer.borderWidth = 2
         queryCategory.layer.cornerRadius = 3.0
         queryCategory.layer.borderColor = UIColor.clear.cgColor
-        self.GetQueryCategories() // MBHUD spinner should appear and then picker should load
+//        self.GetQueryCategories() // MBHUD spinner should appear and then picker should load
 //        let yourAttributes = [NSAttributedStringKey.foregroundColor: UIColor.blue]
 //        let finalString =  NSMutableAttributedString(string: note1, attributes: yourAttributes)
 //        let attributeStr =  NSMutableAttributedString(string: note2 , attributes: yourAttributes)
@@ -101,36 +103,18 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
         let numberOfChars = newText.count
         return numberOfChars < 500;
     }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+      func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-//    func getList()
-//            {
-//            let reachability = Reachability.forInternetConnection
-//            let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
-//            if internetStatus != NotReachable
-//            {
-//            MBProgressHUD.showAdded(to: self.view, animated: true).labelText = NSLocalizedString("Loading", comment: "")
-//            RestClient.getList(dropDownString, callBackHandler: {(response: Any, error: Error?) -> Void in
-//            self.listArr = [Any]()
-//            print("response", response)
-//            DispatchQueue.main.async
-//            {
-//            let detailsArr = response as! [[String:Any]]
-//            for dict in detailsArr
-//            {
-//                let model = CommonResponseModel()
-//                model.paramID = (dict["Id"] as! NSNumber).stringValue
-//                model.paramName = dict["Name"] as! String?
-//                self.listArr.append(model)
-//                }
-//            self.dropDownTbl.reloadAllComponents()
-//            MBProgressHUD.hide(for: self.view, animated: true)
-//              }
-//             })
-//             }
-//            }
-//
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return listArr.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        let model = listArr[row]
+        return (model as AnyObject).paramName
+    }
     func GetQueryCategories()
     {
         let headers:[String:String]=["x-appapikey": "A4PPMSV001:9QxMhKNDHBabavdShJ6dSkL75qXwyKdhuqAWrLar1mo=","cache-control":"no-cache"]
@@ -159,30 +143,57 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
             }
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
-            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
-                let queryDic = json?["Categories"] as? [[String : Any]]
+//            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
+//               let queryDic = json?["Categories"] as? [[String : Any]]
+//            {
+//                var filtered = [[String : Any]]()
+//                DispatchQueue.main.async
+//                    {
+//                        if queryDic.count == 0
+//                        {
+//                            MBProgressHUD.hide(for: self.view, animated: true)
+//                        }
+//                        else
+//                        {
+//                            for item in queryDic
+//                            {
+//                                var prunedDictionary = [String: Any]()
+//                                for key: String in item.keys
+//                                {
+//                                    if !(item[key] is NSNull) {
+//                                        prunedDictionary[key] = item[key]
+//                                    }
+//                                    else
+//                                    {
+//                                        prunedDictionary[key] = ""
+//                                    }
+            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
             {
-                var filtered = [[String : Any]]()
-                DispatchQueue.main.async
-                    {
-                        if queryDic.count == 0
+                if let queryDic = json?["Categories"] as? [[String : Any]]
+                {
+                    var filtered = [[String : Any]]()
+                    DispatchQueue.main.async
                         {
-                            MBProgressHUD.hide(for: self.view, animated: true)
-                        }
-                        else
-                        {
-                            for item in queryDic
+                            let detailsArr = response as! [[String:Any]]
+                            for dict in detailsArr
+                            if queryDic.count == 0
                             {
-                                var prunedDictionary = [String: Any]()
-                                for key: String in item.keys
+                                MBProgressHUD.hide(for: self.view, animated: true)
+                            }
+                            else
+                            {
+                                for item in queryDic
                                 {
-                                    if !(item[key] is NSNull) {
-                                        prunedDictionary[key] = item[key]
-                                    }
-                                    else
+                                    var prunedDictionary = [String: Any]()
+                                    for key: String in item.keys
                                     {
-                                        prunedDictionary[key] = ""
-                                    }
+                                        if !(item[key] is NSNull) {
+                                            prunedDictionary[key] = item[key]
+                                        }
+                                        else
+                                        {
+                                            prunedDictionary[key] = ""
+                                        }
                                 }
                                 print(prunedDictionary)
                                 filtered.append(prunedDictionary)
@@ -190,26 +201,24 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate
                             for item in filtered
                             {
                                 let model = CommonResponseModel()
-                                model.paramID = (item["Id"] as! NSNumber).stringValue
-                                model.paramName = item["Category"] as! String
+                                model.paramID = ((item["Id"] as! NSNumber).stringValue)
+                                model.paramName = (item["Category"] as! String)
                                 self.listArr.append(model)
-                            }
-                            MBProgressHUD.hide(for: self.view, animated: true)
+                                print(model.paramName)
+                                print(model.paramID)
+                              }
                         }
-                }
+                            self.dropDownTbl.reloadAllComponents()
+                            MBProgressHUD.hide(for: self.view, animated: true)
+                    }
             }
             else
             {
                 MBProgressHUD.hide(for: self.view, animated: true)
             }
-            
+            }
         }
         task.resume()
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
-    {
-        return self.listArr.count
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView == querytextView
