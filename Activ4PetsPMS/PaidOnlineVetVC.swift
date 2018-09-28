@@ -159,6 +159,18 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
                 textField.inputAccessoryView = toolbar
                 textField.inputView = listTv
             }
+            else if textField == self.phoneTxt
+            {
+                let numberToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+                numberToolbar.barStyle = .blackTranslucent
+                let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.cancelDropDownSelection))
+                done.tag = textField.tag
+                let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelDropDownSelection))
+                cancel.tag = textField.tag
+                numberToolbar.items = [cancel, UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), done]
+                numberToolbar.sizeToFit()
+                textField.inputAccessoryView = numberToolbar
+            }
         }
     func keyboardInputShouldDelete(_ textField: UITextField) -> Bool
     {
@@ -268,31 +280,7 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
         }
        func doValidationsForUpdateDetails()
        {
-        if statetxt.text == nil || (statetxt.text == "")
-        {
-            let alert = UIAlertController(title: "Warning", message: "Please enter your state", preferredStyle: .alert)
-            let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(OK)
-            statetxt.layer.borderColor = UIColor.red.cgColor
-            present(alert, animated: true)
-        }
-        else  if phoneTxt.text == nil || (phoneTxt.text == "")
-        {
-            let alert = UIAlertController(title: "Warning", message: "Please enter your contact number", preferredStyle: .alert)
-            let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(OK)
-            phoneTxt.layer.borderColor = UIColor.red.cgColor
-            present(alert, animated: true)
-        }
-        else  if timeZone.text == nil || (timeZone.text == "")
-        {
-            let alert = UIAlertController(title: "Warning", message: "Please choose your time zone", preferredStyle: .alert)
-            let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(OK)
-            timeZone.layer.borderColor = UIColor.red.cgColor
-            present(alert, animated: true)
-        }
-        else  if emailtxt.text == nil || (emailtxt.text == "")
+        if emailtxt.text == nil || (emailtxt.text == "")
         {
             if emailtxt.text != nil && emailtxt.text != ""
             {
@@ -313,14 +301,49 @@ class PaidOnlineVetVC: UIViewController,UITextFieldDelegate, UIPickerViewDelegat
             {
                 emailtxt.layer.borderColor = UIColor.clear.cgColor
             }
+            if phoneTxt.text == nil || (phoneTxt.text == "")
+            {
+                let alert = UIAlertController(title: "Warning", message: "Please enter your contact number", preferredStyle: .alert)
+                let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(OK)
+                phoneTxt.layer.borderColor = UIColor.red.cgColor
+                present(alert, animated: true)
+            }
+            else
+            {
+                phoneTxt.layer.borderColor = UIColor.clear.cgColor
+            }
+        
+        if timeZone.text == nil || (timeZone.text == "")
+        {
+            let alert = UIAlertController(title: "Warning", message: "Please choose your time zone", preferredStyle: .alert)
+            let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(OK)
+            timeZone.layer.borderColor = UIColor.red.cgColor
+            present(alert, animated: true)
         }
         else
         {
-            emailtxt.layer.borderColor = UIColor.lightGray.cgColor
-            statetxt.layer.borderColor = UIColor.lightGray.cgColor
-            timeZone.layer.borderColor = UIColor.lightGray.cgColor
-            phoneTxt.layer.borderColor = UIColor.lightGray.cgColor
-             // prepaer segue for next page
+            timeZone.layer.borderColor = UIColor.clear.cgColor
+        }
+            if statetxt.text == nil || (statetxt.text == "")
+            {
+                let alert = UIAlertController(title: "Warning", message: "Please enter your state", preferredStyle: .alert)
+                let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(OK)
+                statetxt.layer.borderColor = UIColor.red.cgColor
+                present(alert, animated: true)
+            }
+            else{
+                statetxt.layer.borderColor = UIColor.clear.cgColor
+            }
+        }
+        else
+        {
+            emailtxt.layer.borderColor = UIColor.clear.cgColor
+            statetxt.layer.borderColor = UIColor.clear.cgColor
+            timeZone.layer.borderColor = UIColor.clear.cgColor
+            phoneTxt.layer.borderColor = UIColor.clear.cgColor
             let vetlist : VetListVC = self.storyboard?.instantiateViewController(withIdentifier: "vetlist") as! VetListVC
             self.navigationController?.pushViewController(vetlist, animated: true)
             let vc = FinalConfirmationVC()

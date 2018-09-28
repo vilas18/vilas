@@ -42,10 +42,9 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
     var navigationControler: UINavigationController?
     var petModelList = [MyPetsModel1]()
     var petInfo: MyPetsModel?
-    var sterileID: String?
+    var sterileID: Bool = false
     var GenderId: String?
     var PetId: String?
-    var PetTypeId: String?
     var query : String = "sick"
     var queryCategory : String?
     var isFromFreeVet: Bool?
@@ -67,16 +66,22 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
         self.PetId = petid
         let petname =  UserDefaults.standard.string(forKey: "SelectedPetName")
         self.petName.text = petname
-        let pettype = UserDefaults.standard.object(forKey: "PetTypeId")
-        self.PetTypeId = pettype as? String
         let gender = UserDefaults.standard.object(forKey: "PetGender")
         self.petGender.text = gender as? String
         if self.petGender.text == nil || self.petGender.text == ""
         {
             self.petGender.isUserInteractionEnabled = true  // *** if gender is from user defaults make interaction = false ***
         }
-        let steriletype = UserDefaults.standard.object(forKey: "sterile")
-        self.isSterile.text = steriletype as? String
+        let steriletype = UserDefaults.standard.string(forKey: "sterile")
+        if steriletype == "Yes"
+        {
+            self.sterileID = true
+        }
+        else
+        {
+            self.sterileID = false
+        }
+        self.isSterile.text = steriletype
         self.title = "Ask a Question"
         let tapG = UITapGestureRecognizer(target: self, action: #selector(self.viewTouched))
         tapG.numberOfTapsRequired = 1
@@ -151,30 +156,54 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
         petName.resignFirstResponder()
         isSterile.resignFirstResponder()
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == self.weight
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        if textField == weight
         {
-            let range: Int = Int(weight.text!)!
-            if (weight.text?.count)! > 5 || range > 11023
-            {
-                weight?.layer.borderColor = UIColor.red.cgColor
-                let alert = UIAlertController(title: "Warning", message: "Weight must be between 0 and 11023 ", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(ok)
-                present(alert, animated: true)
-                return false
-            }
-            else
-            {
-                weight?.layer.borderColor = UIColor.clear.cgColor
-                return true
-            }
-            
+        if textField.text == nil || textField.text == ""
+        {
+        
         }
-        resignFirstResponder()
-        textField.resignFirstResponder()
-        return true
-    }
+        else{
+        let range: Int = Int(textField.text!)!
+        
+        if (textField.text?.count)! > 5 || range > 11023
+        {
+        weight?.layer.borderColor = UIColor.red.cgColor
+        let alert = UIAlertController(title: "Warning", message: "Weight must be between 0 and 11023 ", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true)
+        }
+        else
+        {
+        weight?.layer.borderColor = UIColor.clear.cgColor
+        }
+        }
+            }
+        }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+//    {
+//        if textField == self.weight
+//        {
+//            let range: Int = Int(weight.text!)!
+//            if (weight.text?.count)! > 5 || range > 11023
+//            {
+//                weight?.layer.borderColor = UIColor.red.cgColor
+//                let alert = UIAlertController(title: "Warning", message: "Weight must be between 0 and 11023", preferredStyle: .alert)
+//                let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                alert.addAction(ok)
+//                present(alert, animated: true)
+//                return false
+//            }
+//            else
+//            {
+//                weight?.layer.borderColor = UIColor.clear.cgColor
+//                return true
+//            }
+//           }
+//           return true
+//    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -240,31 +269,7 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
             self.textFld = textField
             textField.inputAccessoryView = numberToolbar
         }
-        else if textField == self.isSterile
-            {
-                let alertControl = UIAlertController(title: "Select Sterile", message: nil, preferredStyle: .actionSheet)
-                let yes = UIAlertAction(title: "Yes", style: .default, handler: {(_ action: UIAlertAction) -> Void in
-                    self.isSterile.text = NSLocalizedString("Yes", comment: "")
-                    self.sterileID = "1"
-                })
-                let no = UIAlertAction(title: "NO", style: .default, handler: {(_ action: UIAlertAction) -> Void in
-                    self.isSterile.text = NSLocalizedString("No", comment: "")
-                    self.sterileID = "0"
-                })
-                let unknown = UIAlertAction(title: "Unknown", style: .default, handler: {(_ action: UIAlertAction) -> Void in
-                    self.isSterile.text = NSLocalizedString("Unknown", comment: "")
-                    self.sterileID = ""
-                })
-                let Cancel = UIAlertAction(title: "Cancel ", style: .cancel, handler: nil)
-                alertControl.addAction(yes)
-                alertControl.addAction(no)
-                alertControl.addAction(unknown)
-                alertControl.addAction(Cancel)
-                alertControl.popoverPresentationController?.sourceView = self.view
-                alertControl.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
-                alertControl.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-                navigationController?.present(alertControl, animated: true)
-        }
+        
     }
     @objc func donewithNumberPad (_ item: UIBarButtonItem)
     {
@@ -349,13 +354,14 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
                     "cache-control": "no-cache"
                 ]
                 //        petType.text = pettype as? String
-                
+                let pettypeid = UserDefaults.standard.object(forKey: "PetTypeId")!
+
                 let firstname :  String = UserDefaults.standard.string(forKey:"UserName")!
                 let phone :  String = UserDefaults.standard.string(forKey:"UserPhoneNumber")! // it may come null handle it ***
                 let newPhone : String = self.removeSpecialCharsFromString(phone)
                 let userId:String = UserDefaults.standard.string(forKey: "userID")!
-                let email: String = UserDefaults.standard.string(forKey: "UserEmail")! // it may come null handle it ***
-                let dict: [String: Any] = [ "OwnerId" : userId,"FirstName": firstname,"LastName": "" ,"Email": email,"PhoneNumber": newPhone ,"StateId": 3,"PetId": PetId! ,"PetTypeId": PetTypeId! ,"PetName":self.petName.text!,"IsSpayed": self.isSterile.text!,"IsSubscribed": optoffer ,"PetDob": self.dobText.text!,"GenderId": GenderId! ,"Weight": self.weight.text! ,"Question": query as Any,"CategoryId": "2"]
+                let email: String = UserDefaults.standard.string(forKey: "UserEmail")!
+                let dict: [String: Any] = [ "OwnerId" : userId,"FirstName": firstname,"LastName": "" ,"Email": email,"PhoneNumber": newPhone ,"StateId": 3,"PetId": PetId! ,"PetTypeId": pettypeid ,"PetName":self.petName.text!,"IsSpayed": sterileID ,"IsSubscribed": optoffer ,"PetDob": self.dobText.text!,"GenderId": GenderId! ,"Weight": self.weight.text! ,"Question": query as Any,"CategoryId": "2"]
                 print(dict)
                 let requestUrl = URL(string: "http://qapetsvetscom.activdoctorsconsult.com/Vet/AskQuestion") // ** before release change the url to live **
                 var request = URLRequest(url:requestUrl!)

@@ -11,8 +11,8 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
 {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var querytextView: UITextView!
-    @IBOutlet weak var queryCategory: UITextField!
     @IBOutlet weak var petType: UITextField!
+    @IBOutlet weak var queryCategory: UITextField!{didSet{queryCategory.delegate = self}}
     @IBOutlet weak var note: UILabel!
     @IBOutlet weak var submitBtn: UIButton!
     var petModelList = [MyPetsModel1]()
@@ -46,10 +46,10 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
         self.emailTxt.text = email
         self.title = "Ask a Question"
         petType.isUserInteractionEnabled = false
-        queryCategory.isUserInteractionEnabled = true
         emailTxt.isUserInteractionEnabled = true
         querytextView.isUserInteractionEnabled = true
         self.querytextView.delegate = self
+        self.queryCategory.delegate = self
         self.querytextView.textColor =  UIColor.lightGray
         self.queryCategory.text = "sick" // this made static please check this ****
         self.queryCategory.isUserInteractionEnabled = false //please change this ****
@@ -95,7 +95,7 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
     @objc func viewTouched(_ sender: Any)
     {
         print("Touched view...")
-        queryCategory.resignFirstResponder()
+//        queryCategory.resignFirstResponder()
         petType.resignFirstResponder()
         emailTxt.resignFirstResponder()
         querytextView.resignFirstResponder()
@@ -145,30 +145,6 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
             }
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
-//            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
-//               let queryDic = json?["Categories"] as? [[String : Any]]
-//            {
-//                var filtered = [[String : Any]]()
-//                DispatchQueue.main.async
-//                    {
-//                        if queryDic.count == 0
-//                        {
-//                            MBProgressHUD.hide(for: self.view, animated: true)
-//                        }
-//                        else
-//                        {
-//                            for item in queryDic
-//                            {
-//                                var prunedDictionary = [String: Any]()
-//                                for key: String in item.keys
-//                                {
-//                                    if !(item[key] is NSNull) {
-//                                        prunedDictionary[key] = item[key]
-//                                    }
-//                                    else
-//                                    {
-//                                        prunedDictionary[key] = ""
-//                                    }
             if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
             {
                 if let queryDic = json?["Categories"] as? [[String : Any]]
@@ -231,9 +207,18 @@ class FreeQuestionVC: UIViewController,UITextFieldDelegate,UITextViewDelegate,UI
             querytextView.textColor = UIColor.black
         }
     }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    {
+        if textField == self.queryCategory
+        {
+            let view1 = UIView()
+            textField.inputView = view1
+        }
+        return true
+    }
     func textFieldDidBeginEditing(_ textField: UITextField)
-       {
-           if textField == queryCategory
+    {
+           if textField == self.queryCategory
             {
             self.textFld = textField
             self.listArr = []

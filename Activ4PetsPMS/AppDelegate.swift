@@ -14,7 +14,6 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate
 {
-    
     var window: UIWindow?
     var navigationControler: UINavigationController?
     var ipAddress : [String]?
