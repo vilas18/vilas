@@ -27235,7 +27235,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKc-x8-05t">
-                                                <rect key="frame" x="141" y="164" width="20" height="20"/>
+                                                <rect key="frame" x="140" y="164" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="5lv-Nr-kCg"/>
                                                     <constraint firstAttribute="height" constant="20" id="fvO-se-P2H"/>
@@ -27246,7 +27246,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-bi-qWE">
-                                                <rect key="frame" x="166" y="165" width="45" height="19.5"/>
+                                                <rect key="frame" x="165" y="165" width="45" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -31912,16 +31912,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose a vet Online" id="kgq-DD-7vB"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <size key="freeformSize" width="375" height="668"/>
                     <connections>
-                        <outlet property="VetListTbl" destination="xFy-Xm-haW" id="eC8-tg-0Xz"/>
                         <segue destination="y8D-UN-EO2" kind="show" identifier="CardPayment" id="cj6-DX-S8d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SZ-Pz-3cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2807" y="2152"/>
+            <point key="canvasLocation" x="3377" y="2127"/>
         </scene>
         <!--Confirmation-->
         <scene sceneID="oLk-uw-ZQa">

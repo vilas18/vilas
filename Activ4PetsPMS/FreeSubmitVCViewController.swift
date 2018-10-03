@@ -384,8 +384,8 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
                     }
                     if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                         print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                        print("response = \(String(describing: response))")
-                        MBProgressHUD.hide(for: self.view, animated: true)
+                                                print("response = \(String(describing: response))")
+MBProgressHUD.hide(for: self.view, animated: true)
                     }
                     let responseString = String(data: data, encoding: .utf8)
                     print("responseString = \(String(describing: responseString))")

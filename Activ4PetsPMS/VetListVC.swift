@@ -44,7 +44,7 @@ class VetListVC: UITableViewController
     var timeZoneId: String?
     var IsSubscribed: Bool = false
     var vetpic: String?
-    @IBOutlet weak var VetListTbl: UITableView!
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
