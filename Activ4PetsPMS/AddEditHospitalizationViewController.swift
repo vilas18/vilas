@@ -275,7 +275,7 @@ class AddEditHospitalizationViewController: UIViewController, UITextFieldDelegat
     func webServiceToUpdateAdd()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

@@ -93,7 +93,7 @@ class VetListVC: UITableViewController
      func checkIfPaid()
      {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = (reachability()?.currentReachabilityStatus())!
         if internetStatus != NotReachable
         {
             let headers = [
@@ -183,7 +183,7 @@ class VetListVC: UITableViewController
             func webServiceToGetVetList()
             {
                 let reachability = Reachability.forInternetConnection
-                let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+                let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
                 if internetStatus != NotReachable
                 {
                     let headers = [
@@ -321,7 +321,7 @@ class VetListVC: UITableViewController
     func RequestVetCall()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

@@ -52,7 +52,7 @@ class SelectApptTypeViewController: UIViewController, UITableViewDataSource, UIT
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             RestClient.getList("AppointmentType", callBackHandler: {(response: Any, error: Error?) -> Void in

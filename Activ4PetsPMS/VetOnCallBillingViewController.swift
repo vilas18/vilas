@@ -239,7 +239,7 @@ class VetOnCallBillingViewController: UIViewController, UITextFieldDelegate, UIP
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             MBProgressHUD.showAdded(to: self.view, animated: true).labelText = NSLocalizedString("Loading", comment: "")
@@ -426,7 +426,7 @@ class VetOnCallBillingViewController: UIViewController, UITextFieldDelegate, UIP
     func callPaymentAPI()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [
@@ -532,7 +532,7 @@ class VetOnCallBillingViewController: UIViewController, UITextFieldDelegate, UIP
     func webServiceToCallFinalVetOnCall()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [
@@ -629,7 +629,7 @@ class VetOnCallBillingViewController: UIViewController, UITextFieldDelegate, UIP
     func postUsedDiscountToServer()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

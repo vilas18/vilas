@@ -389,7 +389,7 @@ class EditAddVeterinarianViewController: UIViewController, UIPickerViewDelegate,
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             MBProgressHUD.showAdded(to: self.view, animated: true).labelText = NSLocalizedString("Loading", comment: "")
@@ -761,7 +761,7 @@ class EditAddVeterinarianViewController: UIViewController, UIPickerViewDelegate,
     func webServiceToUpadteAdd()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

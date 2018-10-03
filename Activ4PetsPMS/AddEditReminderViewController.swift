@@ -215,7 +215,7 @@ class AddEditReminderViewController: UIViewController, UITextFieldDelegate, UITe
     func webServiceToAddEditRem()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

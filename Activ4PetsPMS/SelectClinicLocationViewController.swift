@@ -49,7 +49,7 @@ class SelectClinicLocationViewController: UIViewController, UITableViewDataSourc
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             RestClient.getList("ClinicLocation", callBackHandler: {(response: Any, error: Error?) -> Void in

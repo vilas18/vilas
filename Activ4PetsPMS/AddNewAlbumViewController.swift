@@ -212,7 +212,7 @@ class AddNewAlbumViewController: UIViewController, UICollectionViewDelegate, UIC
     func webServiceToUpdateAdd()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [
@@ -400,7 +400,7 @@ class AddNewAlbumViewController: UIViewController, UICollectionViewDelegate, UIC
     func uploadPhotoToAddToAlbum()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

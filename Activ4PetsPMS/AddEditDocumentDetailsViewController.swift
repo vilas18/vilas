@@ -143,13 +143,11 @@ class AddEditDocumentDetailsViewController: UIViewController, UITextViewDelegate
         
         // self.dateView.isHidden = true
         
-    }
-    
-    
+    }    
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             MBProgressHUD.showAdded(to: self.view, animated: true).labelText = NSLocalizedString("Loading", comment: "")
@@ -442,7 +440,7 @@ class AddEditDocumentDetailsViewController: UIViewController, UITextViewDelegate
     func webServiceToUpdateAdd()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

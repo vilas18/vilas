@@ -634,7 +634,7 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             MBProgressHUD.showAdded(to: self.view, animated: true).labelText = NSLocalizedString("Loading", comment: "")
@@ -1404,7 +1404,7 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
     func webServiceToUplaodPetProfileImage(_ image: String)
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             var petStr: String = ""
@@ -1530,7 +1530,7 @@ class AddEditPetViewController: UIViewController, UIPickerViewDataSource, UIPick
     func webServiceToUplaodPetCoverImage(_ image: String)
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+       let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

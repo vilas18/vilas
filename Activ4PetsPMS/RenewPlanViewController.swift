@@ -325,7 +325,7 @@ class RenewPlanViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     func getList()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             MBProgressHUD.showAdded(to: self.view, animated: true).labelText = NSLocalizedString("Loading", comment: "")
@@ -511,7 +511,7 @@ class RenewPlanViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     func callPaymentAPI()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+       let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [
@@ -566,7 +566,7 @@ class RenewPlanViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     func webServiceToUpdateRenewPlan()
     {
         let reachability = Reachability.forInternetConnection
-        let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+        let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
         if internetStatus != NotReachable
         {
             let headers = [

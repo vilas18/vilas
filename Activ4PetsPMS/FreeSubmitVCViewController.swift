@@ -346,7 +346,7 @@ class FreeSubmitVCViewController : UIViewController, UIPickerViewDataSource, UIP
         func webServiceForFree()
         {
             let reachability = Reachability.forInternetConnection
-            let internetStatus: NetworkStatus = reachability().currentReachabilityStatus()
+            let internetStatus: NetworkStatus = reachability()!.currentReachabilityStatus()
             if internetStatus != NotReachable
             {
                 let headers = [
